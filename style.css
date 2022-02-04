@@ -12,6 +12,7 @@
 	font: inherit;
 	vertical-align: baseline;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 .container {
@@ -31,7 +32,6 @@
 
 .rocket {
     width: 40rem;
-    /* width: 2rem; */
 
 }
 
@@ -80,4 +80,9 @@ button {
     margin-left: 10rem;
     margin-right: 10rem;
     margin-top: 3rem;
+    background-color: var(--purple);
+}
+
+button a {
+    color: #FFFF;
 }
