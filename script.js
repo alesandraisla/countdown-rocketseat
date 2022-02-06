@@ -1,31 +1,30 @@
-// Pegando o DOM  
-const dayHTML = document.querySelector('#day');
+let dayHTML = document.querySelector('#day');
+let hourHTML = document.querySelector('#hour');
+let minuteHTML = document.querySelector('#minute');
+let secondHTML = document.querySelector('#second');
 
-console.log(day)
+let dateFuture = new Date('2022-02-10')
 
-//Expressao resulta no ano atual
-const datePresent = new Date('2022-02-04')
-
-const dateFuture = new Date('2022-02-10')
-
-//Contador   
-const updateCountdown = () => {
-    //diferenca entre a data atual e a próxima data resulta em milisegundo
-    const currentTime = new Date()
-    const difference = dateFuture - currentTime;
-    const days = Math.floor(difference / 1000 / 60 / 60 / 24); 
-    const hours = Math.floor(difference / 1000 / 60 / 60) % 24;
-    const minutes = Math.floor(difference / 1000 / 60) % 60;
-    const seconds = Math.floor(difference / 1000) % 60;
-
-    dayHTML.textContent = days;
-    console.log({ days, hours, minutes, seconds })
-
+let insertCountdownValues = ({ days, hours, minutes, seconds}) => {
+    dayHTML.textContent = days < 10 ? '0' + days : days;
+    hourHTML.textContent = hours < 10 ? '0' + hours : hours;
+    minuteHTML.textContent = minutes < 10 ? '0' + minutes : minutes;
+    secondHTML.textContent = seconds < 10 ? '0' + seconds : seconds;
 }
 
-// funcao que ira ser executada a cada x segundos 
+//Contador   
+let updateCountdown = () => {
+    let currentTime = new Date()
+    let difference = dateFuture.getTime() - currentTime.getTime();
+
+    let days = Math.floor(difference / 1000 / 60 / 60 / 24); 
+    let hours = Math.floor(difference / 1000 / 60 / 60) % 24;
+    let minutes = Math.floor(difference / 1000 / 60) % 60;
+    let seconds = Math.floor(difference / 1000) % 60;
+
+    insertCountdownValues({ days, hours, minutes, seconds})
+}
+
 setInterval(updateCountdown, 1000)
 
 updateCountdown()
-// console.log(datePresent)
-// console.log(dateFuture)
