@@ -7,13 +7,14 @@ Desafio proposto no final do curso Discover da Rocketseat. Criar uma página de 
 HTML - Utilizei tags do HTML5.
 CSS - O layout foi construído utilizando GRID Layout. E alguns componentes foi utilizado FLEX. Modelo responsivo.
 
-## Link para visualização ## 🔍 
+## Link para visualização 🔍 
 
 [Cliqui aqui - Countdown](https://alesandraisla.github.io/countdown-rocketseat/).
 
-## Layout Mobile e Desktop ##
+## Layout Mobile e Desktop 
 
 <div align="center">
      <img src="./assets/images/mobile.png" width="250px" align="center" > 
+     <br>
     <img src="./assets//images/desktop.png" width="600px" align="center" height="400px">
 </div>
