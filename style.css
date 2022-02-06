@@ -40,9 +40,9 @@
 }
 
 footer {
-   text-align: center;
-   color: var(--purple);
-   font-size: 11px;
+    text-align: center;
+    color: var(--purple);
+    font-size: 11px;
 }
 
 h1 {
@@ -61,7 +61,7 @@ h1 {
     color: var(--light-grey);
 }
 
-.text {
+.text, .phrase {
     margin-top: 20px;
 }
 
@@ -91,4 +91,57 @@ button {
 
 button a {
     color: #FFFF;
+}
+
+@media (max-width: 768px) {
+    .rocket {
+        margin-top: 30px;
+        width: 30rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .phrase {
+        margin-left: 30px;
+    }
+    .text-item {
+        margin-right: 43px;
+    }
+    .hour-item {
+        margin-left: 20px;
+        font-size: 60px;
+    }
+    .rocket {
+        width: 24rem;
+    }
+}
+
+@media(max-width:400px) {
+    h1 {
+        font-size: 31px;
+    }
+    .text-item {
+        margin-right: 22px;
+    }
+    .hour-item {
+        font-size: 51px;
+    }
+    #day {
+        margin-left: 105px;
+
+    }
+    .phrase {
+        font-size: 12px;
+        margin-left: 137px;
+    }
+    #minute {
+        margin-right: 10px;
+    }
+    #second {
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+    .rocket {
+        width: 16rem;
+    }
 }
