@@ -13,6 +13,7 @@
 	vertical-align: baseline;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,6 +41,7 @@
 }
 
 footer {
+    background-color: #f6f6fc;
     text-align: center;
     color: var(--purple);
     font-size: 11px;
@@ -54,6 +56,40 @@ h1 {
 
 }
 
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 90px;
+    margin-top: 20px;
+}
+
+.countdown > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    min-width: 116px;
+    color: var(--black);
+    text-align: center;
+}
+
+.separator {
+    margin: 0 10px 10px 10px;
+    color: var(--black);
+
+}
+
+h6 {
+    font-size: 16px;
+    color: var(--light-grey);
+}
+
 .text-item {
     margin-right: 60px;
     font-size: 16px;
@@ -63,6 +99,11 @@ h1 {
 
 .text, .phrase {
     margin-top: 20px;
+}
+
+.phrase {
+    text-align: center;
+    color: var(--light-grey);
 }
 
 
@@ -83,14 +124,20 @@ button {
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: 0.3rem;
-    margin-left: 10rem;
+    margin-left: 13.466rem;
     margin-right: 10rem;
     margin-top: 3rem;
     background-color: var(--purple);
 }
 
-button a {
+button {
     color: #FFFF;
+}
+
+@media (max-width: 1024px) {
+    .rocket {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -103,45 +150,92 @@ button a {
 @media (max-width: 500px) {
     .phrase {
         margin-left: 30px;
+        font-size: 15px;
     }
     .text-item {
         margin-right: 43px;
     }
     .hour-item {
         margin-left: 20px;
-        font-size: 60px;
+        font-size: 46px;
     }
     .rocket {
         width: 24rem;
     }
+    button a {
+        font-size: 12px;
+    }
 }
 
-@media(max-width:400px) {
-    h1 {
-        font-size: 31px;
-    }
-    .text-item {
-        margin-right: 22px;
-    }
-    .hour-item {
-        font-size: 51px;
-    }
-    #day {
-        margin-left: 105px;
 
+@media(max-width:480px) {
+    .countdown {
+        font-size:50px;
+    }
+    .number {
+        min-width:0;
+        
+    }
+    .button {
+        padding: 0.4rem 1rem;
+        margin-left: 140px;
+        margin-right: 0px;  
+    }
+    .phrase {
+        margin-left: 0;
+    }
+}
+
+@media(max-width:425px) {
+    button  {
+        width: 156px;
+        margin-left: 9.466rem;
+    }
+}
+
+@media(max-width:375px) {
+    h1 {
+        margin-right: 20px;
+        font-size: 28px;
+        margin-top: 15px;
+    }
+    .countdown {
+        margin-right: 20px;
+    }
+    .countdown:first-child {
+        margin-left: 10px;
     }
     .phrase {
         font-size: 12px;
-        margin-left: 137px;
-    }
-    #minute {
-        margin-right: 10px;
-    }
-    #second {
-        margin-right: 0px;
-        margin-left: 10px;
+        margin-top: 10px;
     }
     .rocket {
-        width: 16rem;
+        width: 18rem;
+    }
+    .countdown:first-child h6 {
+        margin-right: 10px;
+    }
+}
+
+@media(max-width:320px) {
+    h1 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .countdown {
+        font-size: 26px;
+        margin: 0 auto;
+    }
+    .phrase {
+        font-size: 12px;
+    }
+    button {
+        margin-top: 20px;
+        width:132px;
+        font-size: 12px;
+        margin-left: 140px;
+    }
+    .rocket {
+        width:16rem;
     }
 }

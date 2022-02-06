@@ -3,7 +3,15 @@ let hourHTML = document.querySelector('#hour');
 let minuteHTML = document.querySelector('#minute');
 let secondHTML = document.querySelector('#second');
 
-let dateFuture = new Date('2022-02-10')
+function register() {
+    alert("Inscrito com sucesso!")
+}
+
+let dateFuture = new Date()
+dateFuture.setDate(dateFuture.getDate() + 10);
+dateFuture.setHours(dateFuture.getHours() - 1);
+dateFuture.setMinutes(dateFuture.getMinutes() - 1);
+
 
 let insertCountdownValues = ({ days, hours, minutes, seconds}) => {
     dayHTML.textContent = days < 10 ? '0' + days : days;
